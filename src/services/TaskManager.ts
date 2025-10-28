@@ -103,6 +103,14 @@ export class TaskManager {
       }
     }
 
+    // 验证更新的描述
+    if (updates.description) {
+      const descValidation = validateDescription(updates.description);
+      if (!descValidation.success) {
+        return descValidation as Result<Task>;
+      }
+    }
+
     // 更新任务
     const updatedTask: Task = {
       ...tasks[index],
