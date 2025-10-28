@@ -40,8 +40,6 @@ export interface TaskFilter {
   priority?: Priority;
   tags?: string[];
   keyword?: string;
-  dueDateFrom?: Date;
-  dueDateTo?: Date;
   isOverdue?: boolean;
 }
 
