@@ -35,6 +35,7 @@ export async function promptNewTask(): Promise<CreateTaskInput> {
         { name: '🟡 中', value: Priority.Medium },
         { name: '🔴 高', value: Priority.High },
       ],
+      loop: false,
       default: Priority.Medium,
     },
     {
@@ -89,6 +90,7 @@ export async function promptSelectTask(tasks: Task[]): Promise<Task | null> {
         name: `${task.title} (${task.id.substring(0, 8)}...)`,
         value: task,
       })),
+      loop: false,
     },
   ]);
 

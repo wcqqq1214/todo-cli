@@ -158,6 +158,7 @@ class App {
           { name: '标记为待办', value: 'todo' },
           { name: '返回', value: 'cancel' },
         ],
+        loop: false,
       },
     ]);
 

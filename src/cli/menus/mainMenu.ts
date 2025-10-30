@@ -33,6 +33,7 @@ export async function showMainMenu(): Promise<MainMenuOption> {
         new inquirer.Separator(),
         { name: '🚪 退出', value: MainMenuOption.Exit },
       ],
+      loop: false,
     },
   ]);
 
